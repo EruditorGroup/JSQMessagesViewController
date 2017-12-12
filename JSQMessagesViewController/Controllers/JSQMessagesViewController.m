@@ -345,12 +345,12 @@ static void JSQInstallWorkaroundForSheetPresentationIssue26295020(void) {
 
     [[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification object:textView];
 
-    [self.collectionView.collectionViewLayout invalidateLayoutWithContext:[JSQMessagesCollectionViewFlowLayoutInvalidationContext context]];
-    [self.collectionView reloadData];
+//    [self.collectionView.collectionViewLayout invalidateLayoutWithContext:[JSQMessagesCollectionViewFlowLayoutInvalidationContext context]];
+//    [self.collectionView reloadData];
 
-    if (self.automaticallyScrollsToMostRecentMessage) {
-        [self scrollToBottomAnimated:animated];
-    }
+//    if (self.automaticallyScrollsToMostRecentMessage) {
+//        [self scrollToBottomAnimated:animated];
+//    }
 }
 
 - (void)finishReceivingMessage
