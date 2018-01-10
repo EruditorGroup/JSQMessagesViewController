@@ -142,6 +142,9 @@ static NSMutableSet *jsqMessagesCollectionViewCellActions = nil;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(jsq_handleTapGesture:)];
     [self addGestureRecognizer:tap];
     self.tapGestureRecognizer = tap;
+    
+    self.avatarContainerView.layer.cornerRadius = 6.0f;
+    self.avatarContainerView.layer.masksToBounds = YES;
 }
 
 - (void)configureAccessoryButton
