@@ -181,6 +181,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (weak, nonatomic, readonly, nullable) UITapGestureRecognizer *tapGestureRecognizer;
 
+/**
+ @author Mikael
+ 
+ Лэйбл с отображением состяния доставленности/прочитанности сообщения
+ */
+@property (weak, nonatomic, readonly, nullable) UIImageView *messageStatusImageView;
+
 #pragma mark - Class methods
 
 /**

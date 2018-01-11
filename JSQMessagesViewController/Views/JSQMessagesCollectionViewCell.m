@@ -58,6 +58,8 @@ static NSMutableSet *jsqMessagesCollectionViewCellActions = nil;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *avatarContainerViewWidthConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *avatarContainerViewHeightConstraint;
 
+@property (weak, nonatomic) IBOutlet UIImageView *messageStatusImageView;
+
 @property (assign, nonatomic) UIEdgeInsets textViewFrameInsets;
 
 @property (assign, nonatomic) CGSize avatarViewSize;
