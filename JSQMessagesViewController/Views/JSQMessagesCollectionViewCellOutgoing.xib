@@ -102,7 +102,7 @@
                         </connections>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fkN-Vg-7A7">
-                        <rect key="frame" x="258" y="144" width="20" height="10"/>
+                        <rect key="frame" x="258" y="139" width="20" height="10"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="10" id="izs-Hy-qEv"/>
                             <constraint firstAttribute="width" constant="20" id="rz2-1n-h9T"/>
@@ -114,10 +114,10 @@
                 <constraint firstItem="2zh-vR-QJW" firstAttribute="top" secondItem="p52-YN-yLu" secondAttribute="bottom" id="3Wx-g0-fTc"/>
                 <constraint firstItem="fkN-Vg-7A7" firstAttribute="trailing" secondItem="2zh-vR-QJW" secondAttribute="trailing" constant="-6" id="3uN-TE-9ZE"/>
                 <constraint firstAttribute="trailing" secondItem="jxM-YD-sVG" secondAttribute="trailing" id="AwY-g7-f1T"/>
-                <constraint firstAttribute="bottom" secondItem="fkN-Vg-7A7" secondAttribute="bottom" id="Ckn-oM-Kqw"/>
                 <constraint firstItem="jxM-YD-sVG" firstAttribute="top" secondItem="23f-xH-rkY" secondAttribute="top" id="HYT-Tw-whz"/>
                 <constraint firstAttribute="trailing" secondItem="X89-B1-aAd" secondAttribute="trailing" id="KLt-Ix-wDa"/>
                 <constraint firstItem="7Uc-dI-YDD" firstAttribute="top" secondItem="2zh-vR-QJW" secondAttribute="bottom" id="Ngq-ew-t2K"/>
+                <constraint firstItem="fkN-Vg-7A7" firstAttribute="centerY" secondItem="7Uc-dI-YDD" secondAttribute="centerY" id="OxB-WS-e5e"/>
                 <constraint firstItem="7Uc-dI-YDD" firstAttribute="leading" secondItem="23f-xH-rkY" secondAttribute="leading" id="fiS-g3-X16"/>
                 <constraint firstAttribute="bottom" secondItem="7Uc-dI-YDD" secondAttribute="bottom" id="gXo-9b-b1W"/>
                 <constraint firstAttribute="trailing" secondItem="p52-YN-yLu" secondAttribute="trailing" id="gen-N0-uZj"/>
