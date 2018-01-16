@@ -244,11 +244,13 @@ static void JSQInstallWorkaroundForSheetPresentationIssue26295020(void) {
     [self.view layoutIfNeeded];
     [self.collectionView.collectionViewLayout invalidateLayout];
 
-    if (self.automaticallyScrollsToMostRecentMessage) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self scrollToBottomAnimated:NO];
-            [self.collectionView.collectionViewLayout invalidateLayoutWithContext:[JSQMessagesCollectionViewFlowLayoutInvalidationContext context]];
-        });
+    if (self.isMovingToParentViewController) {
+        if (self.automaticallyScrollsToMostRecentMessage) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self scrollToBottomAnimated:NO];
+                [self.collectionView.collectionViewLayout invalidateLayoutWithContext:[JSQMessagesCollectionViewFlowLayoutInvalidationContext context]];
+            });
+        }
     }
 }
 
