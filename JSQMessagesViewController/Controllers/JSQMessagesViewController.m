@@ -519,7 +519,7 @@ static void JSQInstallWorkaroundForSheetPresentationIssue26295020(void) {
     cell.delegate = collectionView;
 
     if (!isMediaMessage) {
-        cell.textView.text = [messageItem text];
+        cell.textView.attributedText = [messageItem attributedText];
         NSParameterAssert(cell.textView.text != nil);
 
         id<JSQMessageBubbleImageDataSource> bubbleImageDataSource = [collectionView.dataSource collectionView:collectionView messageBubbleImageDataForItemAtIndexPath:indexPath];
@@ -590,7 +590,7 @@ static void JSQInstallWorkaroundForSheetPresentationIssue26295020(void) {
     if (!isMediaMessage) {
         cell.accessibilityLabel = [NSString stringWithFormat:[NSBundle jsq_localizedStringForKey:@"text_message_accessibility_label"],
                                    [messageItem senderDisplayName],
-                                   [messageItem text]];
+                                   [messageItem attributedText].string];
     }
     else {
         cell.accessibilityLabel = [NSString stringWithFormat:[NSBundle jsq_localizedStringForKey:@"media_message_accessibility_label"],
@@ -687,7 +687,7 @@ static void JSQInstallWorkaroundForSheetPresentationIssue26295020(void) {
                                          forPasteboardType:[mediaData mediaDataType]];
             }
         } else {
-            [[UIPasteboard generalPasteboard] setString:[messageData text]];
+            [[UIPasteboard generalPasteboard] setString:[messageData attributedText].string];
         }
     }
     else if (action == @selector(delete:)) {

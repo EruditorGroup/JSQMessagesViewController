@@ -18,7 +18,7 @@
 @property (strong, nonatomic) NSString *senderId;
 @property (strong, nonatomic) NSString *senderDisplayName;
 @property (strong, nonatomic) NSDate *date;
-@property (strong, nonatomic) NSString *text;
+@property (strong, nonatomic) NSAttributedString *attributedText;
 
 @end
 
@@ -33,9 +33,9 @@
     self.senderDisplayName = @"Jesse Squires";
     self.date = [NSDate date];
     
-    self.text = @"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque"
-    @"laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi"
-    @"architecto beatae vitae dicta sunt explicabo.";
+    self.attributedText = [[NSAttributedString alloc] initWithString:@"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque"
+                           @"laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi"
+                           @"architecto beatae vitae dicta sunt explicabo."];
 }
 
 - (void)tearDown
@@ -43,7 +43,7 @@
     self.senderId = nil;
     self.senderDisplayName = nil;
     self.date = nil;
-    self.text = nil;
+    self.attributedText = nil;
     [super tearDown];
 }
 
@@ -54,7 +54,7 @@
     JSQMessage *msg = [[JSQMessage alloc] initWithSenderId:self.senderId
                                          senderDisplayName:self.senderDisplayName
                                                       date:self.date
-                                                      text:self.text];
+                                            attributedText:self.attributedText];
     XCTAssertNotNil(msg, @"Message should not be nil");
 }
 
@@ -63,7 +63,7 @@
     JSQMessage *msg = [[JSQMessage alloc] initWithSenderId:self.senderId
                                          senderDisplayName:self.senderDisplayName
                                                       date:self.date
-                                                      text:self.text];
+                                            attributedText:self.attributedText];
     JSQMessage *copy = [msg copy];
     
     XCTAssertEqualObjects(msg, copy, @"Copied messages should be equal");
@@ -78,7 +78,7 @@
     JSQMessage *msg = [[JSQMessage alloc] initWithSenderId:self.senderId
                                          senderDisplayName:self.senderDisplayName
                                                       date:self.date
-                                                      text:self.text];
+                                            attributedText:self.attributedText];
     NSData *msgData = [NSKeyedArchiver archivedDataWithRootObject:msg];
     
     JSQMessage *unarchivedMsg = [NSKeyedUnarchiver unarchiveObjectWithData:msgData];

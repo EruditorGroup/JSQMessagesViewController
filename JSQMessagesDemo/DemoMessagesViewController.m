@@ -177,7 +177,7 @@
     if (!copyMessage) {
         copyMessage = [JSQMessage messageWithSenderId:kJSQDemoAvatarIdJobs
                                           displayName:kJSQDemoAvatarDisplayNameJobs
-                                                 text:@"First received!"];
+                                       attributedText:[[NSAttributedString alloc] initWithString:@"First received!"]];
     }
     
     /**
@@ -263,7 +263,7 @@
              */
             newMessage = [JSQMessage messageWithSenderId:randomUserId
                                              displayName:self.demoData.users[randomUserId]
-                                                    text:copyMessage.text];
+                                          attributedText:copyMessage.attributedText];
         }
         
         /**
@@ -350,7 +350,7 @@
     JSQMessage *message = [[JSQMessage alloc] initWithSenderId:senderId
                                              senderDisplayName:senderDisplayName
                                                           date:date
-                                                          text:text];
+                                                          attributedText:[[NSAttributedString alloc] initWithString:text]];
     
     [self.demoData.messages addObject:message];
     
