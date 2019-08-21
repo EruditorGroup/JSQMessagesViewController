@@ -60,6 +60,8 @@ static NSMutableSet *jsqMessagesCollectionViewCellActions = nil;
 
 @property (weak, nonatomic) IBOutlet UIImageView *messageStatusImageView;
 
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *bubbleContainerLeadingConstraint;
+
 @property (assign, nonatomic) UIEdgeInsets textViewFrameInsets;
 
 @property (assign, nonatomic) CGSize avatarViewSize;
@@ -243,6 +245,10 @@ static NSMutableSet *jsqMessagesCollectionViewCellActions = nil;
     [super setSelected:selected];
     self.avatarImageView.highlighted = selected;
     self.messageBubbleImageView.highlighted = selected;
+}
+
+- (void)setFullScreenWidthConstraint {
+    self.messageBubbleContainerWidthConstraint.constant = [[UIScreen mainScreen] bounds].size.width - self.bubbleContainerLeadingConstraint.constant * 2;
 }
 
 
