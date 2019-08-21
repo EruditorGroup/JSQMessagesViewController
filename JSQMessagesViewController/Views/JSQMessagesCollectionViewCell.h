@@ -224,13 +224,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)registerMenuAction:(SEL)action;
 
 /**
- *  Set avatar view size.
- *
- *  @param avatar size.
- */
-- (void)setAvatarViewSize:(CGSize)avatarViewSize;
-
-/**
  *  Set width constraint to screen size.
  */
 - (void)setFullScreenWidthConstraint;

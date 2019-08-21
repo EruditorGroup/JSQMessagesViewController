@@ -210,6 +210,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (CGSize)sizeForItemAtIndexPath:(NSIndexPath *)indexPath;
 
+/**
+ *  Computes and returns the left & right margin of the item specified by indexPath.
+ *
+ *  @param indexPath The index path of the item to be displayed.
+ *
+ *  @return The margin of the item displayed at indexPath.
+ */
+- (CGFloat)messageBubbleLeftRightMarginAtIndexPath:(NSIndexPath *)indexPath;
+
 @end
 
 NS_ASSUME_NONNULL_END

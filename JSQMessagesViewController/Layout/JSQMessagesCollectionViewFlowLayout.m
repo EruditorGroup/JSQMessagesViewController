@@ -425,6 +425,10 @@ const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault = 30.0f;
     return CGSizeMake(self.itemWidth, ceilf(finalHeight));
 }
 
+- (CGFloat)messageBubbleLeftRightMarginAtIndexPath:(NSIndexPath *)indexPath {
+    return self.messageBubbleLeftRightMargin;
+}
+
 - (void)jsq_configureMessageCellLayoutAttributes:(JSQMessagesCollectionViewLayoutAttributes *)layoutAttributes
 {
     NSIndexPath *indexPath = layoutAttributes.indexPath;
