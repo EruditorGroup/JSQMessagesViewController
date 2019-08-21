@@ -216,6 +216,8 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param indexPath The index path of the item to be displayed.
  *
  *  @return The margin of the item displayed at indexPath.
+ *
+ *  @see messageBubbleLeftRightMargin
  */
 - (CGFloat)messageBubbleLeftRightMarginAtIndexPath:(NSIndexPath *)indexPath;
 

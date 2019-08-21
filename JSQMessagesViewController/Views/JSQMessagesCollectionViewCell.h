@@ -223,11 +223,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)registerMenuAction:(SEL)action;
 
-/**
- *  Set width constraint to screen size.
- */
-- (void)setFullScreenWidthConstraint;
-
 @end
 
 NS_ASSUME_NONNULL_END

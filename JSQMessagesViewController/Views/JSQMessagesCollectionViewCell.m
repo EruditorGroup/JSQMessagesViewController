@@ -247,11 +247,6 @@ static NSMutableSet *jsqMessagesCollectionViewCellActions = nil;
     self.messageBubbleImageView.highlighted = selected;
 }
 
-- (void)setFullScreenWidthConstraint {
-    self.messageBubbleContainerWidthConstraint.constant = [[UIScreen mainScreen] bounds].size.width - self.bubbleContainerLeadingConstraint.constant * 2;
-}
-
-
 #pragma mark - Menu actions
 
 - (BOOL)respondsToSelector:(SEL)aSelector
