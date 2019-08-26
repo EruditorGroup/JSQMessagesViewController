@@ -245,7 +245,6 @@ static NSMutableSet *jsqMessagesCollectionViewCellActions = nil;
     self.messageBubbleImageView.highlighted = selected;
 }
 
-
 #pragma mark - Menu actions
 
 - (BOOL)respondsToSelector:(SEL)aSelector
